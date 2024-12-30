@@ -13,10 +13,10 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="PrintNexus/" element={<Home />} />
-        <Route path="/collection" element={<Collections />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/product/:id" element={<Product />} />
+        <Route path="PrintNexus/collection" element={<Collections />} />
+        <Route path="PrintNexus/about" element={<About />} />
+        <Route path="PrintNexus/contact" element={<Contact />} />
+        <Route path="PrintNexus/product/:id" element={<Product />} />
       </Routes>
       <Footer />
     </div>
