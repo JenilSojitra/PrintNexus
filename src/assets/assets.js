@@ -60,6 +60,7 @@ import menu_icon from "./menu_icon.png";
 import about_img_1 from "./about_img_1.jpg";
 import about_img_2 from "./about_img_2.png";
 import header_image from "./header_image.jpg";
+import dropdown_icon from "./dropdown_icon.png";
 
 export const assets = {
   logo,
@@ -68,6 +69,7 @@ export const assets = {
   about_img_1,
   about_img_2,
   header_image,
+  dropdown_icon,
 };
 
 export const products = [
