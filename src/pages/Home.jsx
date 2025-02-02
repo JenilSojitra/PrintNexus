@@ -1,19 +1,44 @@
-import React from "react";
-import Hero from "../components/Hero";
-import LatestCollection from "../components/LatestCollection";
-import BestSellers from "../components/BestSellers";
-import NewsLetterBox from "../components/NewsLetterBox";
-import Experience from "../components/Experience";
+import React, { Suspense } from "react";
+
+// Lazy load all components
+const Hero = React.lazy(() => import("../components/Hero"));
+const Experience = React.lazy(() => import("../components/Experience"));
+const LatestCollection = React.lazy(() =>
+  import("../components/LatestCollection")
+);
+const BestSellers = React.lazy(() => import("../components/BestSellers"));
+const NewsLetterBox = React.lazy(() => import("../components/NewsLetterBox"));
+
+// Loading fallback components
+const LoadingSection = () => (
+  <div className="w-full h-64 bg-gray-100 animate-pulse">
+    <div className="h-full bg-gray-200 rounded-md"></div>
+  </div>
+);
 
 const Home = () => {
   return (
-    <>
-      <Hero />
-      <Experience />
-      <LatestCollection />
-      <BestSellers />
-      <NewsLetterBox />
-    </>
+    <div className="space-y-8">
+      <Suspense fallback={<LoadingSection />}>
+        <Hero />
+      </Suspense>
+
+      <Suspense fallback={<LoadingSection />}>
+        <Experience />
+      </Suspense>
+
+      <Suspense fallback={<LoadingSection />}>
+        <LatestCollection />
+      </Suspense>
+
+      <Suspense fallback={<LoadingSection />}>
+        <BestSellers />
+      </Suspense>
+
+      <Suspense fallback={<LoadingSection />}>
+        <NewsLetterBox />
+      </Suspense>
+    </div>
   );
 };
 

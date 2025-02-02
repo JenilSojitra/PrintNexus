@@ -11,18 +11,18 @@ const ProductItemFallback = () => (
   </div>
 );
 
-const LatestCollection = () => {
+const RelatedProducts = ({ category, subCategory }) => {
   const { products } = useContext(ProductsContext);
-  const [latestProducts, setLatestProducts] = useState([]);
+  const [related, setRelated] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if (products.length > 0) {
-      // Get the latest products by date if available, otherwise slice
-      const sorted = [...products].sort(
-        (a, b) => new Date(b.createdAt || 0) - new Date(a.createdAt || 0)
-      );
-      setLatestProducts(sorted.slice(0, 6));
+      let pCopy = products.slice();
+      pCopy = pCopy.filter((item) => item.category == category);
+      pCopy = pCopy.filter((item) => item.subCategory == subCategory);
+
+      setRelated(pCopy.slice(0, 4));
       setIsLoading(false);
     }
   }, [products]);
@@ -44,26 +44,21 @@ const LatestCollection = () => {
   }
 
   return (
-    <div className="my-20">
-      <div className="text-center py-8 text-3xl">
+    <div className="my-24">
+      <div className="text-center text-3xl py-2">
         <Suspense
           fallback={
             <div className="h-8 bg-gray-200 rounded w-48 mx-auto"></div>
           }
         >
-          <Title text1="LATEST" text2="COLLECTIONS" />
+          <Title text1="RELATED" text2="PRODUCTS" />
         </Suspense>
-        <p className="w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600">
-          Discover our newest arrivals, featuring the latest trends and timeless
-          pieces carefully curated for our discerning customers. Each item is
-          selected to bring you the best in style, quality, and value.
-        </p>
       </div>
-
-      <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-        {latestProducts.map((item) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 gap-y-6">
+        {related.map((item, index) => (
           <Suspense key={item._id} fallback={<ProductItemFallback />}>
             <ProductItems
+              key={index}
               id={item._id}
               name={item.name}
               image={item.image}
@@ -76,4 +71,4 @@ const LatestCollection = () => {
   );
 };
 
-export default LatestCollection;
+export default RelatedProducts;

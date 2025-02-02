@@ -1,13 +1,15 @@
-import React from "react";
-import Title from "../components/Title";
+import React, { Suspense } from "react";
+const Title = React.lazy(() => import("../components/Title"));
+const Teams = React.lazy(() => import("../components/Teams"));
 import { assets } from "../assets/assets";
-import Teams from "../components/Teams";
 
 const About = () => {
   return (
     <>
       <div className="text-2xl text-center pt-8 border-t">
-        <Title text1="ABOUT" text2="US" />
+        <Suspense fallback={<div className="h-8" />}>
+          <Title text1="ABOUT" text2="US" />
+        </Suspense>
       </div>
 
       <div className="my-10 flex flex-col md:flex-row gap-16">
@@ -15,6 +17,7 @@ const About = () => {
           src={assets.about_img_1}
           alt="About"
           className="w-full md:max-w-[450px] rounded-md"
+          loading="lazy"
         />
         <div className="flex flex-col justify-center gap-6 md:w-2/4 text-gray-600">
           <b className="text-gray-800">Our Vision</b>
@@ -43,7 +46,9 @@ const About = () => {
       </div>
 
       <div className="text-2xl text-center pt-10">
-        <Title text1="WHY" text2="CHOOSE US" />
+        <Suspense fallback={<div className="h-8" />}>
+          <Title text1="WHY" text2="CHOOSE US" />
+        </Suspense>
       </div>
       <div className="my-10 flex flex-col md:flex-row gap-16">
         <div className="flex flex-col justify-center gap-6 md:w-2/4 text-gray-600">
@@ -80,10 +85,13 @@ const About = () => {
           src={assets.about_img_2}
           alt="About"
           className="w-full md:max-w-[450px] rounded-md"
+          loading="lazy"
         />
       </div>
 
-      <Teams />
+      <Suspense fallback={<div className="h-32" />}>
+        <Teams />
+      </Suspense>
     </>
   );
 };

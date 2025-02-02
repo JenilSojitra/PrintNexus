@@ -1,15 +1,25 @@
-import { assets } from "../assets/assets";
-import Title from "./Title";
+import React, { Suspense } from "react";
+const Title = React.lazy(() => import("./Title"));
+
+// Loading component for title
+const TitleLoadingFallback = () => (
+  <div className="space-y-4 text-center">
+    <div className="h-8 bg-gray-200 rounded w-48 mx-auto"></div>
+    <div className="h-20 bg-gray-100 rounded w-3/4 mx-auto"></div>
+  </div>
+);
 
 const Experience = () => {
   return (
     <div className="my-20">
       <div className="text-center py-8 text-3xl">
-        <Title text1="OUR" text2="SERVICES" />
-        <p className="w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600">
-          We provide best customer experiences and we offer premium quality and
-          timeless designs.
-        </p>
+        <Suspense fallback={<TitleLoadingFallback />}>
+          <Title text1="OUR" text2="SERVICES" />
+          <p className="w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600">
+            We provide best customer experiences and we offer premium quality
+            and timeless designs.
+          </p>
+        </Suspense>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 gap-y-6 mt-3">
         <div className="px-5">
