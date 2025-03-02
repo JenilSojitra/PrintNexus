@@ -12,14 +12,14 @@ function App() {
     <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
       <Navbar />
       <Routes>
-        <Route path="printnexus/home" element={<Home />} />
-        <Route path="printnexus/collection" element={<Collections />} />
-        <Route path="printnexus/about" element={<About />} />
-        <Route path="printnexus/contact" element={<Contact />} />
-        <Route path="printnexus/product/:id" element={<Product />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/collection" element={<Collections />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/product/:id" element={<Product />} />
 
-        <Route path="*" element={<Navigate to={"printnexus/home"} />} />
-        <Route path="/" element={<Navigate to={"printnexus/home"} />} />
+        <Route path="*" element={<Navigate to={"/home"} />} />
+        <Route path="/" element={<Navigate to={"/home"} />} />
       </Routes>
       <Footer />
     </div>

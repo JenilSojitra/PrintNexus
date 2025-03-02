@@ -9,34 +9,34 @@ const Navbar = () => {
     <>
       <nav className={`sticky ${visible ? "h-[300px]" : ""} transition-all`}>
         <header className="flex items-center justify-between py-5 font-medium">
-          <NavLink to="printnexus/home">
+          <NavLink to="/home">
             <img src={assets.logo} alt="Logo" className="w-40" />
           </NavLink>
           <ul className="hidden sm:flex gap-5 text-sm text-gray-700">
             <NavLink
               className="flex flex-col items-center gap-1 hover:text-black"
-              to="printnexus/home"
+              to="/home"
             >
               <p>HOME</p>
               <hr className="w-2/4 border-none h-[2px] bg-black hidden" />
             </NavLink>
             <NavLink
               className="flex flex-col items-center gap-1 hover:text-black"
-              to="printnexus/collection"
+              to="/collection"
             >
               <p>COLLECTION</p>
               <hr className="w-2/4 border-none h-[2px] bg-black hidden" />
             </NavLink>
             <NavLink
               className="flex flex-col items-center gap-1 hover:text-black"
-              to="PrintNexus/about"
+              to="/about"
             >
               <p>ABOUT</p>
               <hr className="w-2/4 border-none h-[2px] bg-black hidden" />
             </NavLink>
             <NavLink
               className="flex flex-col items-center gap-1 hover:text-black"
-              to="printnexus/contact"
+              to="/contact"
             >
               <p>CONTACT</p>
               <hr className="w-2/4 border-none h-[2px] bg-black hidden" />
@@ -68,28 +68,28 @@ const Navbar = () => {
             <NavLink
               onClick={() => setVisible(false)}
               className="py-2 pl-6 border"
-              to="printnexus/home"
+              to="/home"
             >
               HOME
             </NavLink>
             <NavLink
               onClick={() => setVisible(false)}
               className="py-2 pl-6 border"
-              to="printnexus/collection"
+              to="/collection"
             >
               COLLECTION
             </NavLink>
             <NavLink
               onClick={() => setVisible(false)}
               className="py-2 pl-6 border"
-              to="printnexus/about"
+              to="/about"
             >
               ABOUT
             </NavLink>
             <NavLink
               onClick={() => setVisible(false)}
               className="py-2 pl-6 border"
-              to="printnexus/contact"
+              to="/contact"
             >
               CONTACT
             </NavLink>

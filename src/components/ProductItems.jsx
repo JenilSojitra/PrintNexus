@@ -6,7 +6,7 @@ const ProductItems = ({ id, name, image, price }) => {
   const { currency } = useContext(ProductsContext);
 
   return (
-    <Link className="cursor-pointer group" to={`/printnexus/product/${id}`}>
+    <Link className="cursor-pointer group" to={`/product/${id}`}>
       <div className="w-full overflow-hidden rounded-lg bg-gray-200">
         <img
           className="h-full w-full object-cover object-center productImage"
