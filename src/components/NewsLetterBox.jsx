@@ -2,13 +2,14 @@ import React from "react";
 
 const NewsLetterBox = () => {
   return (
-    <div className="text-center my-20">
+    <div className="text-center my-10">
       <p className="text-2xl font-bold text-gray-800">
-        Subscribe to our newsletter to get updates <br /> to our latest
-        collections.
+        Subscribe to Our Newsletter and Stay Updated with the Latest Collections
       </p>
       <p className="text-gray-400 mt-3">
-        Get 25% off on your first order just by subscribing to our newsletter.
+        Enjoy 25% OFF on your first order simply subscribe to our newsletter and
+        be the first to know about our newest arrivals, exclusive deals, and
+        fashion trends delivered straight to your inbox.
       </p>
       <form className="w-full sm:w-1/2 flex items-center gap-3 mx-auto my-6">
         <div className="flex border border-gray-300 bg-gray-100 w-full rounded-lg">

@@ -7,10 +7,9 @@ const Contact = () => {
       <div className="text-center text-2xl pt-10 border-t">
         <Title text1="CONTACT" text2="US" />
         <p className="w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600">
-          Got any question about the product or scaling on our platform? We're
-          here to help.
-          <br />
-          Chat to our friendly team 24/7 and get onboard in less than 5 minutes.
+          Have questions about our products or selling on our platform? <br />
+          Our friendly team is here 24/7 to assist you get started in just
+          minutes!
         </p>
       </div>
       <div className="mb-5 mt-10 flex flex-col justify-center md:flex-row gap-20">

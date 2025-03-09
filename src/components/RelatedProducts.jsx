@@ -63,6 +63,7 @@ const RelatedProducts = ({ category, subCategory }) => {
               name={item.name}
               image={item.image}
               price={item.price}
+              rating={item.rating}
             />
           </Suspense>
         ))}

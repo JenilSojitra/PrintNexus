@@ -44,7 +44,7 @@ const LatestCollection = () => {
   }
 
   return (
-    <div className="my-20">
+    <div className="my-10">
       <div className="text-center py-8 text-3xl">
         <Suspense
           fallback={
@@ -54,9 +54,8 @@ const LatestCollection = () => {
           <Title text1="LATEST" text2="COLLECTIONS" />
         </Suspense>
         <p className="w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600">
-          Discover our newest arrivals, featuring the latest trends and timeless
-          pieces carefully curated for our discerning customers. Each item is
-          selected to bring you the best in style, quality, and value.
+          Each piece is thoughtfully curated to reflect the season's most
+          stylish designs while maintaining the quality and value you expect.
         </p>
       </div>
 
@@ -68,6 +67,7 @@ const LatestCollection = () => {
               name={item.name}
               image={item.image}
               price={item.price}
+              rating={item.rating}
             />
           </Suspense>
         ))}

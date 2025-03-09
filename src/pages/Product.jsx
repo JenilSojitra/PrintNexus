@@ -41,12 +41,16 @@ const Product = () => {
                 onClick={() => setImage(item)}
                 key={index}
                 alt={productData.name + "_" + index}
-                className="w-[24%] sm:w-full sm:mb-3 flex-shrink-0 cursor-pointer"
+                className="w-[24%] sm:w-full sm:mb-3 flex-shrink-0 cursor-pointer h-[150px]"
               />
             ))}
           </div>
           <div className="w-full sm:w-[80%]">
-            <img src={image} alt={productData.name} className="w-full h-auto" />
+            <img
+              src={image}
+              alt={productData.name}
+              className="w-full h-[750px]"
+            />
           </div>
         </div>
         <div className="flex-1">
@@ -88,19 +92,23 @@ const Product = () => {
         </div>
         <div className="flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500">
           <p>
-            An e-commerce website is an online platform that facilitates the
-            buying and selling of products or services over the internet. It
-            serves as a virtual marketplace where businesses and individuals can
-            showcase their products, interact with customers, and conduct
-            transactions without the need for a physical presence. E-commerce
-            websites have gained immense popularity due to their convenience,
-            accessibility, and the global reach they offer.
+            This e-commerce website serves as a virtual marketplace designed to
+            facilitate the buying and selling of products and services online,
+            offering customers a seamless and convenient shopping experience.
+            With leadership by Jenil Sojitra and powered by the innovation of
+            PrintNexus, this platform enables businesses and individuals to
+            showcase their products, connect with customers, and conduct secure
+            transactions without the need for a physical storefront.
           </p>
           <p>
-            E-commerce websites typically display products or services along
-            with detailed descriptions, images, prices, and any available
-            variations (e.g., sizes, colors). Each product usually has its own
-            dedicated page with relevant information.
+            Each product listed on our platform includes detailed descriptions,
+            high-quality images, accurate pricing, and available variations such
+            as sizes or colors to help customers make informed decisions. While
+            we strive to maintain accuracy and clarity in all product listings,
+            slight variations may occur depending on suppliers or manufacturing
+            batches. We are committed to providing reliable, transparent, and
+            customer-focused service to ensure a smooth and satisfying shopping
+            journey for every user.
           </p>
         </div>
       </div>

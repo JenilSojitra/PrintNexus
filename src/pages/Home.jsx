@@ -18,7 +18,7 @@ const LoadingSection = () => (
 
 const Home = () => {
   return (
-    <div className="space-y-8">
+    <div>
       <Suspense fallback={<LoadingSection />}>
         <Hero />
       </Suspense>

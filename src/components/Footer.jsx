@@ -9,10 +9,13 @@ const Footer = () => {
         <div className="col-span-2 flex sm:grid flex-col justify-center align-middle items-center gap-5">
           <img src={assets.logo} alt="Logo" className="w-40" />
           <p className="w-full md:w-2/3 text-gray-600">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam unde
-            voluptatibus corporis magnam aliquam porro fugit mollitia ullam
-            dignissimos ratione, aliquid officia recusandae quam commodi quia
-            nihil. Hic, aperiam dolorem.
+            PrintNexus is a dedicated printed product selling e-commerce
+            platform designed to empower creators, brands, and businesses to
+            showcase and sell high-quality printed merchandise online. From
+            custom apparel and accessories to personalized gifts and promotional
+            items, PrintNexus offers a seamless, scalable, and user-friendly
+            platform to manage products, orders, and customer engagement—all in
+            one place.
           </p>
           <div className="flex items-center gap-5">
             <Link

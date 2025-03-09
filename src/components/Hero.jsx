@@ -7,7 +7,7 @@ const Hero = () => {
       {/* Right Side */}
       <img
         src={assets.header_image}
-        alt="Hero"
+        alt="Jenil Sojitra"
         className="w-full h-[70vh] bg-center rounded-lg object-cover brightness-50"
       />
       <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-white">

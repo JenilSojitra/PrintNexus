@@ -34,15 +34,14 @@ const BestSellers = () => {
   }, [products]); // Added products as dependency
 
   return (
-    <div className="my-20">
+    <div className="my-10">
       <div className="text-center py-8 text-3xl">
         <Suspense fallback={<TitleLoadingFallback />}>
           <Title text1="BEST" text2="SELLERS" />
           <p className="w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Consectetur possimus itaque tempore impedit ad quidem, quo placeat
-            expedita harum laboriosam, sint doloremque facere, ut quam odit
-            distinctio modi assumenda nemo?
+            Featuring the most-loved and top-rated products chosen by our
+            customers. These standout pieces combine style, quality, and
+            performance, making them must-haves for every wardrobe.
           </p>
         </Suspense>
       </div>
@@ -55,6 +54,7 @@ const BestSellers = () => {
               name={item.name}
               image={item.image}
               price={item.price}
+              rating={item.rating}
             />
           </Suspense>
         ))}

@@ -11,7 +11,7 @@ const TitleLoadingFallback = () => (
 
 const Experience = () => {
   return (
-    <div className="my-20">
+    <div className="my-10">
       <div className="text-center py-8 text-3xl">
         <Suspense fallback={<TitleLoadingFallback />}>
           <Title text1="OUR" text2="SERVICES" />
