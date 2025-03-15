@@ -12,7 +12,7 @@ const ProductItems = ({ id, name, image, price, rating = 4.5 }) => {
         <img
           className="h-[400px] w-full object-cover object-center productImage"
           src={image[0]}
-          alt={`Jenil Sojitra`}
+          alt={`Jenil Sojitra - ${name}`}
         />
       </div>
       <h3 className="mt-4 text-sm text-gray-700">{name}</h3>

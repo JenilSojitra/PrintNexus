@@ -2,7 +2,7 @@ import React from "react";
 
 const NewsLetterBox = () => {
   return (
-    <div className="text-center my-10">
+    <div className="text-center my-20">
       <p className="text-2xl font-bold text-gray-800">
         Subscribe to Our Newsletter and Stay Updated with the Latest Collections
       </p>

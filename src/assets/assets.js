@@ -295,3 +295,92 @@ export const persons = [
     jobTitle: "Senior Cost Accountant",
   },
 ];
+
+import gallery_1 from "./Gellery/1.jpg";
+import gallery_2 from "./Gellery/2.jpg";
+import gallery_3 from "./Gellery/3.jpg";
+import gallery_4 from "./Gellery/4.jpg";
+import gallery_5 from "./Gellery/5.jpg";
+import gallery_6 from "./Gellery/6.jpg";
+import gallery_7 from "./Gellery/7.jpg";
+import gallery_8 from "./Gellery/8.jpg";
+import gallery_9 from "./Gellery/9.jpg";
+import gallery_10 from "./Gellery/10.jpg";
+import gallery_11 from "./Gellery/11.jpg";
+import gallery_12 from "./Gellery/12.jpg";
+import gallery_13 from "./Gellery/13.jpg";
+import gallery_14 from "./Gellery/14.jpg";
+import gallery_15 from "./Gellery/15.jpg";
+import gallery_16 from "./Gellery/16.jpg";
+import gallery_17 from "./Gellery/17.jpg";
+
+export const gallery = [
+  {
+    src: gallery_1,
+    alt: "Men's Cotton T-Shirt",
+  },
+  {
+    src: gallery_2,
+    alt: "Men's Cotton T-Shirt",
+  },
+  {
+    src: gallery_3,
+    alt: "Men's Cotton T-Shirt",
+  },
+  {
+    src: gallery_4,
+    alt: "Men's Denim Jeans",
+  },
+  {
+    src: gallery_5,
+    alt: "Men's Denim Jeans",
+  },
+  {
+    src: gallery_6,
+    alt: "Men's Denim Jeans",
+  },
+  {
+    src: gallery_7,
+    alt: "Women's Floral Kurti",
+  },
+  {
+    src: gallery_8,
+    alt: "Women's Floral Kurti",
+  },
+  {
+    src: gallery_9,
+    alt: "Women's Floral Kurti",
+  },
+  {
+    src: gallery_10,
+    alt: "Women's Floral Kurti",
+  },
+  {
+    src: gallery_11,
+    alt: "Women's Leggings",
+  },
+  {
+    src: gallery_12,
+    alt: "Women's Leggings",
+  },
+  {
+    src: gallery_13,
+    alt: "Women's Leggings",
+  },
+  {
+    src: gallery_14,
+    alt: "Women's Leggings",
+  },
+  {
+    src: gallery_15,
+    alt: "Women's Tunic Top",
+  },
+  {
+    src: gallery_16,
+    alt: "Women's Tunic Top",
+  },
+  {
+    src: gallery_17,
+    alt: "Women's Tunic Top",
+  },
+];

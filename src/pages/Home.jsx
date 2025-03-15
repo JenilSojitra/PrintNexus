@@ -8,6 +8,7 @@ const LatestCollection = React.lazy(() =>
 );
 const BestSellers = React.lazy(() => import("../components/BestSellers"));
 const NewsLetterBox = React.lazy(() => import("../components/NewsLetterBox"));
+const Gallery = React.lazy(() => import("../components/Gellery"));
 
 // Loading fallback components
 const LoadingSection = () => (
@@ -33,6 +34,10 @@ const Home = () => {
 
       <Suspense fallback={<LoadingSection />}>
         <BestSellers />
+      </Suspense>
+
+      <Suspense fallback={<LoadingSection />}>
+        <Gallery />
       </Suspense>
 
       <Suspense fallback={<LoadingSection />}>
